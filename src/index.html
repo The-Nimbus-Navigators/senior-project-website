@@ -5,6 +5,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./output.css" />
+        <script>
+            //input file path to add to list of files
+            const pdfFiles = [
+                'assets/pdfs/1.pdf',
+            ];
+
+            function loadPDFs() {
+                const container = document.getElementById('pdf-container');
+                pdfFiles.forEach(pdf => {
+                    const link = document.createElement('a');
+                    link.href = pdf; // Use relative path to the PDF file
+                    link.target = '_blank'; // Open in new tab
+                    link.textContent = pdf.split('/').pop(); // Set link text to the file name
+                    container.appendChild(link);
+                });
+            }
+
+            // Call function on page load
+            window.onload = loadPDFs;
+        </script>
     </head>
     <body class="h-screen bg-white font-mono m-8 [&_p]:text-[#2A2B2A] [&_h1]:text-[#FF8966] [&_h2]:text-[#E5446D] [&_h3]:text-[#706C61] [&_h3]:py-2 [&_h3]:text-2xl">
         <h1 class="text-5xl font-bold ">RIT Senior Project: The Nimbus Navigators<h1>
@@ -42,11 +62,18 @@
                         <li> Note Taker: Connor Poulos</li>
                         <li> Architect: Dylan Mulligan</li>
                     </ul>
+                    <p class="italic font-bold text-sm py-2">
+                        Note: All members perticpate in development –
+                        therefore all can assume the role of developer
+                    </p>
                 </div>
-                <p class="italic font-bold text-sm py-2">
-                Note: All members perticpate in development –
-                therefore all can assume the role of developer
-                </p>
+                <div>
+                    <h3 class="font-bold">Documents</h3>
+                    <div id="pdf-container" class="flex flex-row [&_a]:flex-auto [&_a]:px-2
+                   [&_a]:text-[#E5446D] [&_a]:text-center [&_a]:bg-neutral-200
+                    [&_a]:p-1 [&_a]:m-2 [&_a]:rounded-full">
+                    </div>
+                </div>
             </div>
         </div>
     </body>
