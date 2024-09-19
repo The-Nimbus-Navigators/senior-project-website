@@ -8,20 +8,28 @@
         <script>
             //input file path to add to list of files
             const pdfFiles = [
-                'assets/pdfs/temp.pdf',
+                'assets/pdfs/time-temp.pdf',
+                'assets/pdfs/doc-temp.pdf'
             ];
 
             function loadPDFs() {
-                const container = document.getElementById('pdf-container');
+                const timeContainer = document.getElementById('time-container');
+                const docContainer = document.getElementById('doc-container');
                 pdfFiles.forEach(pdf => {
                     const link = document.createElement('a');
+                    const fileNameType = pdf.split('/').pop().split(".")[0].split("-"); // name
                     link.href = pdf; // Use relative path to the PDF file
                     link.target = '_blank'; // Open in new tab
-                    link.textContent = pdf.split('/').pop(); // Set link text to the file name
-                    container.appendChild(link);
+                    link.textContent = fileNameType[1];
+                    if(fileNameType[0] == "time"){
+                        timeContainer.appendChild(link);
+                    } else if (fileNameType[0] == "doc"){
+                        docContainer.appendChild(link);
+                    } else {
+                        docContainer.appendChild(link);
+                    }
                 });
             }
-
             // Call function on page load
             window.onload = loadPDFs;
         </script>
@@ -68,8 +76,13 @@
                     </p>
                 </div>
                 <div>
-                    <h3 class="font-bold">Documents</h3>
-                    <div id="pdf-container" class="flex flex-row [&_a]:flex-auto [&_a]:px-2
+                    <h3 class="font-bold">Team Documents</h3>
+                    <div id="doc-container" class="flex flex-row [&_a]:flex-auto [&_a]:px-2
+                    [&_a]:text-[#E5446D] [&_a]:text-center [&_a]:bg-neutral-200
+                     [&_a]:p-1 [&_a]:m-2 [&_a]:rounded-full">
+                     </div>
+                    <h3 class="font-bold">Time Reports</h3>
+                    <div id="time-container" class="flex flex-row [&_a]:flex-auto [&_a]:px-2
                    [&_a]:text-[#E5446D] [&_a]:text-center [&_a]:bg-neutral-200
                     [&_a]:p-1 [&_a]:m-2 [&_a]:rounded-full">
                     </div>
