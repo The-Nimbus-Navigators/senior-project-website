@@ -27,9 +27,12 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.4
       - run: npm install
-      - run: npm run build
+      - run: npx tailwindcss -i ./src/input.css -o ./src/output.css
+      - run: ls -al
+      - run: ls -al src
       - run: mv src/index.html .
       - run: mv src/output.css .
+      - run: ls -al
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
