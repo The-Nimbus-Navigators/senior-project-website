@@ -28,6 +28,7 @@ jobs:
         uses: actions/setup-node@v4.0.4
       - run: npm install
       - run: npm run build
+      - run: npx tailwindcss
       - run: mv src/index.html .
       - run: mv src/output.css .
       - name: Setup Pages
