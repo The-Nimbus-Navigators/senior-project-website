@@ -27,6 +27,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.4
       - run: npm install
+      - run: npm install -D tailwindcss
       - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
