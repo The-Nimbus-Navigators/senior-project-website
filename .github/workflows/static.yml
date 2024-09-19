@@ -29,12 +29,14 @@ jobs:
       - run: npm install
       - run: npm install -D tailwindcss
       - run: npm run build
+      - run: mv src/index.html .
+      - run: mv src/output.css .
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
