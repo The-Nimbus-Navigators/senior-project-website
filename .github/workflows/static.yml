@@ -29,8 +29,9 @@ jobs:
       - run: npm install
       - run: npx tailwindcss -i ./src/input.css -o ./src/output.css
       - run: mv src/index.html .
-      - run: mv src/output.css .
+      - run: mv src/css .
       - run: mv src/assets .
+      - run: mv src/js .
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
