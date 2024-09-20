@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.4
       - run: npm install
-      - run: npx tailwindcss -i ./src/input.css -o ./src/output.css
+      - run: npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css
       - run: mv src/index.html .
       - run: mv src/css .
       - run: mv src/assets .
