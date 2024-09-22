@@ -5,9 +5,14 @@
  */
 const PDF_FILES = [
     //Time
-    'assets/pdfs/time-temp.pdf',
+    'assets/pdfs/time-SP-TimeSheet Phil.xlsx',
+    'assets/pdfs/time-SP-TimeSheet Laxmi.xlsx',
+    'assets/pdfs/time-SP-TimeSheet Ethan.xlsx',
+    'assets/pdfs/time-SP-TimeSheet Dylan.xlsx',
+    'assets/pdfs/time-SP-TimeSheet Connor.xlsx',
     //Docs
-    'assets/pdfs/doc-temp.pdf',
+    'assets/pdfs/doc-4UP-Week3.pdf',
+    'assets/pdfs/doc-4UP-Week4.pdf',
 ];
 
 /**
