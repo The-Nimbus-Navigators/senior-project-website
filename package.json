@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "npx serve",
-    "build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css"
   }
 }
