@@ -12,6 +12,7 @@ const DELIVERABLE_FILES = [
     'assets/deliverables/doc-4UP_Week8.pdf',
     'assets/deliverables/doc-4UP_Week9.pdf',
     'assets/deliverables/doc-4UP_Week10.pdf',
+    'assets/deliverables/doc-4UP_Week11.pdf',
     'assets/deliverables/doc-Project_Metrics.pdf'
 ];
 
