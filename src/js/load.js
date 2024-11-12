@@ -17,7 +17,7 @@ const DELIVERABLE_FILES = [
 
 const TIME_FILES = [
     //Time
-    'assets/timesheets/time-SP_TimeSheet_Phil.xlsx',
+    'assets/timesheets/time-SP_TimeSheet_Phil.pdf',
     'assets/timesheets/time-SP_TimeSheet_Laxmi.xlsx',
     'assets/timesheets/time-SP_TimeSheet_Ethan.xlsx',
     'assets/timesheets/time-SP_TimeSheet_Dylan.xlsx',
